@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJt3Wc8LCxQF1nxuS5nHXG2I4EdfV0wZ7MjYbs2s6aDdbVnsWkFvRHNAYuR42" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Edit Book</h1>
+        <form action="{{ url_for('update', document_id=document['_id']) }}" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" id="title" name="title" class="form-control" value="{{ document['title'] }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="author" class="form-label">Author:</label>
+                <input type="text" id="author" name="author" class="form-control" value="{{ document['author'] }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="price" class="form-label">Price:</label>
+                <input type="text" id="price" name="price" class="form-control" value="{{ document['price'] }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="isbn" class="form-label">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" class="form-control" value="{{ document['isbn'] }}" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Book</button>
+        </form>
+        <br>
+        <a href="{{ url_for('read', document_id=document['_id']) }}" class="btn btn-secondary">Back to Book Details</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

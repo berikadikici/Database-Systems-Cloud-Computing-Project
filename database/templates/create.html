@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a New Book</title>
+</head>
+<body>
+    <h1>Add a New Book</h1>
+    <form action="{{ url_for('create_page') }}" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price" required><br><br>
+
+        <label for="isbn">ISBN:</label><br>
+        <input type="text" id="isbn" name="isbn" required><br><br>
+
+        <input type="submit" value="Add Book">
+    </form>
+    <br>
+    <a href="{{ url_for('hello_world') }}">Back to Home</a>
+</body>
+</html>

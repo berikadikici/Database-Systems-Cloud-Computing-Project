@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Bookstore</title>
+</head>
+<body>
+    <h1>Welcome to the Bookstore</h1>
+    <p>Click below to view or manage books:</p>
+    <ul>
+        <li><a href="{{ url_for('books') }}">View All Books</a></li>
+        <li><a href="{{ url_for('create_page') }}">Add a New Book</a></li>
+    </ul>
+</body>
+</html>

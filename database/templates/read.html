@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p><strong>Title:</strong> {{ document['title'] }}</p>
+    <p><strong>Author:</strong> {{ document['author'] }}</p>
+    <p><strong>Price:</strong> {{ document['price'] }}</p>
+    <p><strong>ISBN:</strong> {{ document['isbn'] }}</p>
+    <p><strong>_id:</strong> {{ document['_id'] }}</p>
+    <br>
+    <a href="{{ url_for('update', document_id=document['_id']) }}">Edit Book</a>
+    <br>
+    <a href="{{ url_for('delete', document_id=document['_id']) }}">Delete Book</a>
+    <br>
+    <a href="{{ url_for('books') }}">Back to Books List</a>
+</body>
+</html>

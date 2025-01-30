@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books List</title>
+</head>
+<body>
+    <h1>Books List</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{{ url_for('read', document_id=book['_id']) }}">{{ book['title'] }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ url_for('hello_world') }}">Back to Home</a>
+</body>
+</html>
